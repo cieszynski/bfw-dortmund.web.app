@@ -7,7 +7,7 @@
   <title>Welcome to bfw-dortmund Hosting</title>
   <link rel="manifest" href="manifest.json" />
 
-  <script>
+  <script type="bla">
     const registerServiceWorker = async () => {
       if ("serviceWorker" in navigator) {
         try {
@@ -28,6 +28,21 @@
     };
 
     registerServiceWorker();
+  </script>
+
+  <script>
+        try {
+          const registration = navigator.serviceWorker.register("/sw.js", {scope: "/"});
+          if (registration.installing) {
+            console.log("Service worker installing");
+          } else if (registration.waiting) {
+            console.log("Service worker installed");
+          } else if (registration.active) {
+            console.log("Service worker active");
+          }
+        } catch (error) {
+          console.error(`Registration failed with ${error}`);
+        }
   </script>
 </head>
 
