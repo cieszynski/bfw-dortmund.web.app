@@ -1,5 +1,9 @@
 {
+    "short_name": "PWA",
     "name": "My PWA",
+    "background_color": "#ffffff",
+    "description": "my description",
+    "id": "/",
     "icons": [
       {
         "src": "icons/512.png",
