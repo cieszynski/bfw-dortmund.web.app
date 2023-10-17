@@ -31,6 +31,7 @@
   </script>
 
   <script>
+    alert(1)
         try {
           const registration = navigator.serviceWorker.register("/sw.js", {scope: "/"});
           if (registration.installing) {
@@ -40,9 +41,11 @@
           } else if (registration.active) {
             console.log("Service worker active");
           }
+    alert(2)
         } catch (error) {
           console.error(`Registration failed with ${error}`);
         }
+    alert(3)
   </script>
 </head>
 
